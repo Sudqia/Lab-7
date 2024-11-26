@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab10</title>
+</head>
+<body>
+    <!--Q1-->
+    <div id="output"></div>
+    <script>
+      function greetUser(name) {
+        document.getElementById('output').innerText = `Hello, ${name}!`;
+      }
+      greetUser('John');
+    </script>
+    <!--Q2-->
+    <p id="message">Initial text</p>
+  <button onclick="changeText()">Click Me</button>
+
+  <script>
+    function changeText() {
+      document.getElementById('message').innerText = 'Hello, World!';
+    }
+  </script>
+  <!--Q3-->
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+  <button onclick="addNumbers()">Add Numbers</button>
+  <div id="result"></div>
+
+  <script>
+    function addNumbers() {
+      let num1 = parseFloat(document.getElementById('num1').value);
+      let num2 = parseFloat(document.getElementById('num2').value);
+      let sum = num1 + num2;
+      document.getElementById('result').innerText = `Result: ${sum}`;
+    }
+  </script>
+  <!--Q4-->
+  <input type="text" id="inputTitle" placeholder="Enter new title">
+  <button onclick="updateTitle()">Update Title</button>
+  <h1 id="title">Old Title</h1>
+
+  <script>
+    function updateTitle() {
+      let newTitle = document.getElementById('inputTitle').value;
+      document.getElementById('title').innerText = newTitle;
+    }
+  </script>
+  <!--Q5-->
+  <input type="text" id="input1" placeholder="Enter first string">
+  <input type="text" id="input2" placeholder="Enter second string">
+  <button onclick="combineText()">Combine Text</button>
+  <p id="combinedText"></p>
+
+  <script>
+    function combineText() {
+      let text1 = document.getElementById('input1').value;
+      let text2 = document.getElementById('input2').value;
+      document.getElementById('combinedText').innerText = text1 + ' ' + text2;
+    }
+  </script>
+  <!--6-->
+  #colorBox {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+  }
+</style>
+</head>
+<body>
+<div id="colorBox"></div>
+<button id="changeColorBtn">Change Background</button>
+
+<script>
+  document.getElementById('changeColorBtn').addEventListener('click', function() {
+    document.getElementById('colorBox').style.backgroundColor = 'blue';
+  });
+</script>
+</body>
+</html>
